@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 // Sempre utilizar essa anotações para o controlador
 @RestController
 @RequestMapping
-public class Controller {
+public class NinjaController {
 
     @GetMapping("/boasvindas") // pegar informação
     public String boasVindas(){
