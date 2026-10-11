@@ -23,19 +23,26 @@ public class NinjaModel  {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column(name = "id")
    private Long id;
 
+    @Column(name = "nome")
    private String nome;
 
    @Column(unique = true) // coluna única - não pode ser repitido
    private String email;
 
+   @Column(name = "img_url")
+   private String imgUrl;
+
+   @Column(name = "idade")
    private int idade;
 
    // @ManyToIne um ninja tem uma unica missão
     // muitos ninjas pode ter uma missão
    @ManyToOne
-   @JoinColumn(name = "missoes_id")
+   @JoinColumn(name = "missoes_id") // Foreing Key ou chave estrangeira
    private MissoesModel missoes;
 
 
